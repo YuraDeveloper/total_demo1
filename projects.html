@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <style>
+      /* General styles */
+      body {
+        background: url("/static/backgrounds/cyberpunk_city.jpg") no-repeat
+          center center/cover;
+        color: #e0e0e0;
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        position: relative;
+      }
+
+      /* Dark overlay for better readability */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: -1;
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0 0 10px #00ffff;
+        z-index: 1000;
+      }
+
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .navbar ul li a {
+        color: #00ffff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: 0.3s;
+        padding: 10px 15px;
+        border-radius: 5px;
+      }
+
+      .navbar ul li a:hover {
+        background: rgba(255, 0, 127, 0.3);
+        box-shadow: 0 0 5px #ff007f;
+        color: #ff007f;
+      }
+
+      /* Section Title */
+      .section-title {
+        font-size: 2.5rem;
+        color: #ff007f;
+        text-shadow: 0 0 10px #ff007f;
+        margin-top: 50px;
+        margin-bottom: 70px;
+      }
+
+      /* Projects Grid */
+      .projects-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
+
+      .project-card {
+        width: 320px;
+        height: 360px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px #00ffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .project-card:hover {
+        transform: scale(1.05);
+      }
+
+      .project-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 10px #00ffff;
+      }
+
+      .btn-animated {
+        width: 90%;
+        margin-top: auto;
+        padding: 12px 25px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #0d0d0d;
+        background: linear-gradient(90deg, #00ffff, #ff007f);
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 0 10px #00ffff;
+        text-transform: uppercase;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-animated:hover {
+        background: linear-gradient(90deg, #ff007f, #00ffff);
+        box-shadow: 0 0 20px #ff007f;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1 class="section-title">My Projects</h1>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="/static/images/snake.jpg" alt="Snake Game" />
+        <h3>Snake Game</h3>
+        <a href="snake.html" class="btn-animated">Play Snake</a>
+      </div>
+      <div class="project-card">
+        <img src="/static/images/tictactoe.jpg" alt="Tic-Tac-Toe Game" />
+        <h3>Tic-Tac-Toe</h3>
+        <a href="tictactoe.html" class="btn-animated">Play Tic-Tac-Toe</a>
+      </div>
+    </div>
+  </body>
+  <div class="background-animation"></div>
+</html>

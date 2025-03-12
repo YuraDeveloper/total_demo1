@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url("/static/backgrounds/testimonials_bg.jpg") no-repeat
+          center center fixed;
+        background-size: cover;
+      }
+
+      .testimonials-container {
+        max-width: 1100px;
+        margin-top: 50px;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.85);
+        border-radius: 15px;
+        box-shadow: 0 0 20px #ffcc00;
+        color: #e0e0e0;
+        text-align: center;
+      }
+
+      .testimonials-title {
+        font-size: 2.8rem;
+        color: #ffcc00;
+        text-shadow: 0 0 12px #ffcc00;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
+        transition: 0.3s;
+      }
+
+      .testimonial-card:hover {
+        box-shadow: 0 0 18px #ffcc00;
+      }
+
+      .testimonial-card p {
+        font-size: 1.4rem;
+        font-style: italic;
+        margin: 12px 0;
+      }
+
+      .testimonial-name {
+        font-weight: bold;
+        color: #ff66b2;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="/blog_project/static/templates/blog.html">Blog</a></li>
+          <li>
+            <a href="testimonials.html" class="active">Testimonials</a>
+          </li>
+          <li><a href="/sections/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="testimonials-container">
+      <h1 class="testimonials-title">What People Say</h1>
+
+      <div class="testimonial-card">
+        <p>
+          "An absolute genius in web and game development! The attention to
+          detail is incredible."
+        </p>
+        <span class="testimonial-name">— Alex R.</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "The futuristic aesthetic and smooth functionality blew my mind!
+          Highly recommended."
+        </p>
+        <span class="testimonial-name">— Sophia M.</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "Working with this developer was a dream. Professional, creative, and
+          highly skilled."
+        </p>
+        <span class="testimonial-name">— Michael T.</span>
+      </div>
+
+      <div class="testimonial-card">
+        <p>
+          "If you need a cutting-edge design that stands out, this is the person
+          to go to!"
+        </p>
+        <span class="testimonial-name">— Emily V.</span>
+      </div>
+    </div>
+  </body>
+</html>

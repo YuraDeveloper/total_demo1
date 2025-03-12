@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <style>
+      /* General Layout Fix */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      /* Center content */
+      .about-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        width: 80%;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .about-container {
+        width: 50%;
+        background: rgba(0, 0, 0, 0.85);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px #00ffff;
+        text-align: left;
+        color: #e0e0e0;
+      }
+
+      .about-container h1 {
+        font-size: 2.5rem;
+        color: #ff007f;
+        text-shadow: 0 0 10px #ff007f;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .about-container p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      .portrait-frame {
+        width: 40%;
+        max-width: 350px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 15px #ff007f;
+      }
+
+      .portrait-frame img {
+        width: 100%;
+        display: block;
+      }
+
+      @media (max-width: 900px) {
+        .about-section {
+          flex-direction: column;
+          text-align: center;
+        }
+        .about-container,
+        .portrait-frame {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="about-section">
+      <div class="about-container">
+        <h1>About Me</h1>
+        <p>
+          Welcome to My Digital Realm. In a world where code shapes reality, I
+          am a digital architect, a creator of cyber landscapes and interactive
+          experiences. Web design and game development aren’t just skills—they
+          are my way of bending the digital fabric into something immersive,
+          futuristic, and alive.
+        </p>
+        <p>
+          From the moment I wrote my first line of code, I knew there was no
+          turning back. The fusion of <b>HTML, CSS, and JavaScript</b> builds
+          the foundations, while <b>Python, Flask, and Node.js</b> add the
+          intelligence beneath the surface. <b>React.js</b> brings
+          interactivity, and <b>Unity</b> opens the portal to infinite gaming
+          worlds.
+        </p>
+        <p>
+          I don’t just write code—I craft experiences. My passion lies in
+          designing sleek, futuristic interfaces, glitching neon aesthetics, and
+          building projects that pulse with digital energy. Every pixel, every
+          function, every animation tells a story.
+        </p>
+        <p>
+          <b>My Mission?</b> To push the boundaries of what’s possible. To
+          create projects that are as functional as they are visually stunning.
+          To blur the line between reality and cyberspace.
+        </p>
+        <p>
+          Join me on this journey. Let’s build the future, one line of code at a
+          time.
+        </p>
+      </div>
+      <div class="portrait-frame">
+        <img
+          src="/static/images/cyberpunk_portrait.jpg"
+          alt="Cyberpunk Portrait"
+        />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: url("/static/backgrounds/blog_bg.jpg") no-repeat center
+          center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 80px;
+      }
+
+      .post-container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.85);
+        border-radius: 15px;
+        box-shadow: 0 0 15px #00ffff;
+        color: #e0e0e0;
+        text-align: left;
+      }
+
+      .post-title {
+        font-size: 2.5rem;
+        color: #ff007f;
+        text-shadow: 0 0 10px #ff007f;
+        text-align: center;
+      }
+
+      .post-meta {
+        text-align: center;
+        font-style: italic;
+        color: #00ffff;
+      }
+
+      .post-content {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      pre {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        overflow-x: auto;
+      }
+
+      .read-more {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background: linear-gradient(90deg, #00ffff, #ff007f);
+        color: #0d0d0d;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: 0.3s;
+      }
+
+      .read-more:hover {
+        background: linear-gradient(90deg, #ff007f, #00ffff);
+        box-shadow: 0 0 10px #ff007f;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/about.html">About Me</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/blog.html" class="active">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="post-container">
+      <h1 class="post-title">{{ post.title }}</h1>
+      <p class="post-meta">Published on {{ post.date }}</p>
+      <div class="post-content">
+        <p>{{ post.content }}</p>
+        <pre><code class="language-python">{{ post.code }}</code></pre>
+      </div>
+      <a href="/blog.html" class="read-more">Back to Blog</a>
+    </div>
+  </body>
+</html>

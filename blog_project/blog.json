@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Building a Cyberpunk Portfolio with Flask",
+    "date": "2025-03-12",
+    "excerpt": "How I built my futuristic portfolio using Flask, HTML, and CSS.",
+    "content": "In this post, I'll walk you through how I created a cyberpunk-inspired portfolio with Flask...",
+    "code": "from flask import Flask\napp = Flask(__name__)\n@app.route('/')\ndef home():\n    return 'Welcome to my Cyberpunk Portfolio!'\nif __name__ == '__main__':\n    app.run(debug=True)"
+  },
+  {
+    "id": 2,
+    "title": "Neon Aesthetics in Web Design",
+    "date": "2025-03-10",
+    "excerpt": "Exploring how neon, glitch effects, and dark themes define modern UI/UX.",
+    "content": "Neon aesthetics are not just about colors, but about the feeling of immersion and energy...",
+    "code": "body {\n    background: radial-gradient(circle, #001f3f, #000);\n    color: #00ffff;\n}"
+  }
+]
